@@ -91,7 +91,7 @@ Please fork the repository and submit a pull request. For major changes, open an
 
 For inquiries or feedback:
 
-- **Email:** [paulo@example.com](mailto:paulo.freire53@gmail.com)
+- **Email:** [paulo.freire53@gmail.com](mailto:paulo.freire53@gmail.com)
 - **LinkedIn:** [linkedin.com/in/paulohfreire](https://www.linkedin.com/in/paulohfreire)
 - **Twitter:** [@paulohfreire](https://twitter.com/paulohfreire)
 
