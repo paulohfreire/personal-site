@@ -1,1 +1,6 @@
-LICENSE.txt
+node_modules/
+dist/
+.angular/
+.claude/
+.htmlhintcache
+npm-debug.log*
