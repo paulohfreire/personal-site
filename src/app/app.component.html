@@ -1,0 +1,42 @@
+<!-- Wrapper -->
+<div id="wrapper">
+  <!-- Header -->
+  <header id="header" [style.display]="isHomeRoute ? '' : 'none'" (click)="$event.stopPropagation()">
+    <div class="logo">
+      <img class="logo"
+        src="https://avatars.githubusercontent.com/u/49009770?u=557350ede83d6f12fb26c0ca20b2efeef61d34c2&v=4&size=64"
+        alt="Paulo Henrique de Oliveira Freire" />
+    </div>
+    <div class="content">
+      <div class="inner">
+        <h1>Hey, I'm Paulo!</h1>
+        <p>Software Engineer | React JS | Angular | Javascript | .Net </p>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a routerLink="/intro">Intro</a></li>
+        <li><a routerLink="/work">Work</a></li>
+        <li><a routerLink="/education">Education</a></li>
+        <li><a href="https://ph-blog.vercel.app/" target="_blank" rel="noopener noreferrer">Blog</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <div id="main" [style.display]="isHomeRoute ? 'none' : ''">
+    <router-outlet></router-outlet>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer" [style.display]="isHomeRoute ? '' : 'none'">
+    <p class="copyright">
+      &copy;
+      <b>{{ currentYear }}</b> Paulo HOF.
+    </p>
+  </footer>
+</div>
+
+<!-- BG -->
+<div id="bg"></div>

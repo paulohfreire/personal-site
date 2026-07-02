@@ -48,3 +48,14 @@
 	@import 'layout/header';
 	@import 'layout/main';
 	@import 'layout/footer';
+
+// Site-specific additions.
+
+	.courses {
+		display: flex;
+		align-items: baseline;
+	}
+
+	.course-title {
+		padding-left: 20px;
+	}

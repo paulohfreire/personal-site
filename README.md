@@ -1,24 +1,17 @@
-# 🌐 Paulo H. Freire – Personal Website
+# Paulo H. Freire - Personal Website
 
-Welcome to the source code for [paulohof.com.br](https://paulohof.com.br), the personal website of Paulo Henrique de Oliveira Freire. This project serves as a digital portfolio, showcasing professional experiences, projects, and contact information.
+Source code for [paulohof.com.br](https://paulohof.com.br), the personal website of Paulo Henrique de Oliveira Freire. The site is now a modern Angular application that preserves the HTML5 UP "Dimension" visual theme.
 
----
-
-## 📁 Project Overview
+## Project Overview
 
 - **Repository:** [paulohfreire/personal-site](https://github.com/paulohfreire/personal-site)
-- **Live Site:** [paulohof.com.br](https://paulohof.com.br)
-- **Primary Technologies:**
-  - **HTML5**
-  - **SCSS**
-  - **CSS3**
-  - **JavaScript**
+- **Live site:** [paulohof.com.br](https://paulohof.com.br)
+- **Primary technologies:** Angular, TypeScript, HTML5, SCSS, CSS3
+- **Theme:** HTML5 UP Dimension
 
----
+## Getting Started
 
-## 🚀 Getting Started
-
-To run this project locally:
+Install dependencies and run the Angular development server locally:
 
 1. **Clone the repository:**
 
@@ -27,9 +20,7 @@ To run this project locally:
    cd personal-site
    ```
 
-2. **Install dependencies:**
-
-   Ensure you have [Node.js](https://nodejs.org/) installed. Then run:
+2. **Install dependencies:** Ensure you have [Node.js](https://nodejs.org/) installed, then run:
 
    ```bash
    npm install
@@ -41,58 +32,73 @@ To run this project locally:
    npm start
    ```
 
-   This will launch the site in your default browser at `http://localhost:3000`.
+   This launches the site at `http://localhost:3000`.
 
----
+## Development Commands
 
-## 🛠️ Project Structure
-
+```bash
+npm start          # Serve the Angular app locally
+npm run build      # Compile SCSS and build Angular into dist/personal-site
+npm run build:css  # Compile SCSS into assets/css
+npm run watch:css  # Recompile CSS while editing SCSS
+npm run check      # Validate HTML, compile CSS, and build Angular
 ```
+
+## Project Structure
+
+```text
 personal-site/
-├── assets/             # Static assets like fonts and icons
-├── images/             # Image files used across the site
-├── index.html          # Main HTML file
-├── styles/             # SCSS/CSS stylesheets
-├── scripts/            # JavaScript files
-├── .gitignore          # Specifies files to ignore in Git
+├── assets/
+│   ├── css/            # Compiled CSS output used by Angular
+│   ├── sass/           # SCSS source files from the theme plus site additions
+│   └── webfonts/       # Font Awesome font files
+├── images/             # Static images and favicons
+├── src/
+│   ├── app/            # Angular standalone components, pages, and routes
+│   ├── index.html      # Angular document shell and metadata
+│   └── main.ts         # Angular bootstrap entry point
+├── angular.json        # Angular workspace configuration
+├── AGENT.md            # Repository guidance for AI agents
+├── package.json        # Local development scripts and dependencies
 └── README.md           # Project documentation
 ```
 
----
+## Navigation
 
-## 📸 Features
+The previous jQuery-driven article navigation was migrated to Angular Router. Routes such as `/intro`, `/work`, `/education`, and `/contact` render standalone page components through `router-outlet`, while close/ESC/outside-click behavior returns to the home route.
 
-- **Responsive Design:** Optimized for desktops, tablets, and mobile devices.
-- **Modern Aesthetics:** Clean and minimalist design to highlight content.
-- **Interactive Elements:** Smooth scrolling and interactive components for enhanced user experience.
-- **Contact Form:** Easily reachable via a built-in contact section.
+## Vendored Assets
 
----
+- `assets/css/fontawesome-all.min.css` and `assets/webfonts/`: Font Awesome Free 5.15.4
+- `assets/sass/`: HTML5 UP Dimension SCSS source
 
-## 📄 License
+## Features
 
-This project is licensed under the [MIT License](LICENSE), allowing for personal and commercial use with proper attribution.
+- **Responsive design:** Optimized for desktops, tablets, and mobile devices.
+- **Angular standalone app:** No NgModule boilerplate for the current portfolio.
+- **Router-based navigation:** Uses Angular Router and standalone page components without jQuery.
+- **Contact form:** Contact section backed by Formspree.
 
----
+## Deployment
 
-## 🤝 Contributing
+Build the production output before publishing:
 
-Contributions are welcome! If you'd like to:
+```bash
+npm run check
+```
 
-- Report a bug
-- Suggest a new feature
-- Improve documentation
+Deploy the generated `dist/personal-site/` directory to the static host configured for `paulohof.com.br`.
 
-Please fork the repository and submit a pull request. For major changes, open an issue first to discuss what you'd like to change.
+## License
 
----
+The original HTML5 UP Dimension theme is licensed under the Creative Commons Attribution 3.0 license. See [LICENSE.txt](LICENSE.txt) and keep the HTML5 UP attribution visible.
 
-## 📬 Contact
+## Contributing
 
-For inquiries or feedback:
+Contributions are welcome. If you'd like to report a bug, suggest a feature, or improve documentation, please fork the repository and submit a pull request. For major changes, open an issue first to discuss what you'd like to change.
 
-- **Email:** [paulo@example.com](mailto:paulo.freire53@gmail.com)
-- **LinkedIn:** [linkedin.com/in/paulohfreire](https://www.linkedin.com/in/paulohfreire)
-- **Twitter:** [@paulohfreire](https://twitter.com/paulohfreire)
+## Contact
 
----
+- **Email:** [paulo.freire53@gmail.com](mailto:paulo.freire53@gmail.com)
+- **LinkedIn:** [linkedin.com/in/phfreire](https://www.linkedin.com/in/phfreire/)
+- **GitHub:** [github.com/paulohfreire](https://github.com/paulohfreire/)

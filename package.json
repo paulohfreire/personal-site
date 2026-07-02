@@ -1,0 +1,33 @@
+{
+  "name": "personal-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Angular personal portfolio website built on the HTML5 UP Dimension theme.",
+  "scripts": {
+    "ng": "ng",
+    "build": "npm run build:css && ng build",
+    "build:css": "sass assets/sass/main.scss assets/css/main.css --style=expanded --no-source-map --quiet",
+    "watch:css": "sass --watch assets/sass/main.scss:assets/css/main.css --style=expanded --no-source-map --quiet",
+    "start": "ng serve --host 0.0.0.0 --port 3000 --open",
+    "check": "npm run check:html && npm run build",
+    "check:html": "htmlhint src/index.html"
+  },
+  "dependencies": {
+    "@angular/common": "^22.0.3",
+    "@angular/compiler": "^22.0.3",
+    "@angular/core": "^22.0.3",
+    "@angular/platform-browser": "^22.0.3",
+    "@angular/router": "^22.0.3",
+    "rxjs": "^7.8.2",
+    "tslib": "^2.8.1",
+    "zone.js": "^0.16.0"
+  },
+  "devDependencies": {
+    "@angular/build": "^22.0.3",
+    "@angular/cli": "^22.0.3",
+    "@angular/compiler-cli": "^22.0.3",
+    "htmlhint": "^1.1.4",
+    "sass": "^1.89.2",
+    "typescript": "~6.0.3"
+  }
+}
