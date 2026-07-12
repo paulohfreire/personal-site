@@ -101,4 +101,35 @@
 				@include padding(2rem, 1.5rem, (1rem, 0, 0.5rem, 0));
 			}
 		}
+
+		// Keep route content compact and readable across phone and small-tablet widths.
+		@media screen and (max-width: 764px) {
+			article {
+				@include padding(2.5rem, 1.25rem, (1rem, 0, 0.5rem, 0));
+				width: min(100%, 36rem);
+				font-size: 0.9rem;
+				overflow-wrap: break-word;
+			}
+
+			#contact {
+				form > .fields > .field,
+				form > .fields > .field.half {
+					width: calc(100% - 1.5rem);
+				}
+			}
+
+			.courses {
+				align-items: flex-start;
+
+				i {
+					flex-shrink: 0;
+				}
+
+				.course-title {
+					min-width: 0;
+					padding-left: 1rem;
+					overflow-wrap: anywhere;
+				}
+			}
+		}
 	}
