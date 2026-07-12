@@ -75,11 +75,6 @@ input, select, textarea {
 @-ms-viewport {
   width: device-width;
 }
-@media screen and (max-width: 480px) {
-  html, body {
-    min-width: 320px;
-  }
-}
 html {
   box-sizing: border-box;
 }
@@ -1341,6 +1336,8 @@ body.is-preload #header .content .inner {
   -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
+  width: 100%;
+  min-width: 0;
   max-width: 100%;
   z-index: 3;
 }
