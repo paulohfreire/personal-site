@@ -75,11 +75,6 @@ input, select, textarea {
 @-ms-viewport {
   width: device-width;
 }
-@media screen and (max-width: 480px) {
-  html, body {
-    min-width: 320px;
-  }
-}
 html {
   box-sizing: border-box;
 }
@@ -1341,6 +1336,8 @@ body.is-preload #header .content .inner {
   -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
+  width: 100%;
+  min-width: 0;
   max-width: 100%;
   z-index: 3;
 }
@@ -1419,6 +1416,29 @@ body.is-preload #header .content .inner {
 @media screen and (max-width: 480px) {
   #main article {
     padding: 3rem 1.5rem 0.5rem 1.5rem;
+  }
+}
+@media screen and (max-width: 764px) {
+  #main article {
+    padding: 3.5rem 1.25rem 1rem 1.25rem;
+    width: min(100%, 36rem);
+    font-size: 0.9rem;
+    overflow-wrap: break-word;
+  }
+  #main #contact form > .fields > .field,
+  #main #contact form > .fields > .field.half {
+    width: calc(100% - 1.5rem);
+  }
+  #main .courses {
+    align-items: flex-start;
+  }
+  #main .courses i {
+    flex-shrink: 0;
+  }
+  #main .courses .course-title {
+    min-width: 0;
+    padding-left: 1rem;
+    overflow-wrap: anywhere;
   }
 }
 
