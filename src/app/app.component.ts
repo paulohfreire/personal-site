@@ -12,6 +12,11 @@ export class AppComponent {
   protected readonly ui = inject(PreferencesService);
   protected readonly currentYear = new Date().getFullYear();
   protected menuOpen = false;
+  protected motionPaused = false;
+
+  protected toggleMotion(): void {
+    this.motionPaused = !this.motionPaused;
+  }
 
   protected toggleMenu(): void {
     this.menuOpen = !this.menuOpen;

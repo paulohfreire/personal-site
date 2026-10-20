@@ -92,4 +92,6 @@ export const portuguese: Readonly<Record<string, string>> = {
   'Use light theme': 'Usar tema claro',
   'Use dark theme': 'Usar tema escuro',
   'Language': 'Idioma',
+  'Pause background animation': 'Pausar animação do fundo',
+  'Resume background animation': 'Retomar animação do fundo',
 };

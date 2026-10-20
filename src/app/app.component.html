@@ -1,3 +1,8 @@
+<div class="ambient-background" [class.is-paused]="motionPaused" aria-hidden="true">
+  <span class="ambient-glow ambient-glow-one"></span>
+  <span class="ambient-glow ambient-glow-two"></span>
+  <span class="ambient-orbit"></span>
+</div>
 <a class="skip-link" href="#main">{{ ui.text('Skip to content') }}</a>
 
 <header class="site-header">
@@ -13,6 +18,9 @@
     <a href="https://applycraft-sigma.vercel.app/" target="_blank" rel="noopener noreferrer" (click)="closeMenu()">Skills <span aria-hidden="true">↗</span></a>
   </nav>
   <div class="header-preferences">
+    <button class="theme-switch motion-switch" type="button" [attr.aria-label]="ui.text(motionPaused ? 'Resume background animation' : 'Pause background animation')" [attr.title]="ui.text(motionPaused ? 'Resume background animation' : 'Pause background animation')" [attr.aria-pressed]="motionPaused" (click)="toggleMotion()">
+      <span aria-hidden="true">{{ motionPaused ? '▶' : 'Ⅱ' }}</span>
+    </button>
     <div class="language-switch" role="group" [attr.aria-label]="ui.text('Language')">
       <button type="button" [attr.aria-pressed]="ui.language() === 'en'" aria-label="English" (click)="ui.setLanguage('en')">EN</button>
       <button type="button" [attr.aria-pressed]="ui.language() === 'pt'" aria-label="Português" (click)="ui.setLanguage('pt')">PT</button>
