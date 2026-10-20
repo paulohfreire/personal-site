@@ -45,7 +45,6 @@
 	@import 'layout/bg';
 	@import 'layout/wrapper';
 	@import 'layout/header';
-	@import 'layout/main';
 	@import 'layout/footer';
 
 // Site-specific additions.
@@ -143,7 +142,41 @@ h2 { font-size: clamp(2rem, 4vw, 4rem); line-height: 1.06; margin-bottom: 2rem; 
 h3 { font-size: 1.25rem; line-height: 1.2; margin-bottom: .5rem; }
 .hero-intro { font-size: 1.1rem; max-width: 610px; }
 .hero-actions, .contact-actions { align-items: center; display: flex; flex-wrap: wrap; gap: .8rem; margin: 2rem 0; }
-.button { border: 1px solid var(--line); border-radius: .35rem; display: inline-flex; font-family: 'DM Mono', monospace; font-size: .72rem; gap: .8rem; letter-spacing: .02em; padding: .85rem 1.1rem; }
+.button {
+	align-items: center;
+	border: 1px solid var(--line);
+	border-radius: .35rem;
+	box-shadow: none;
+	display: inline-flex;
+	font-family: 'DM Mono', monospace;
+	font-size: .8rem;
+	font-weight: 600;
+	gap: .8rem;
+	height: auto;
+	justify-content: center;
+	letter-spacing: .02em;
+	line-height: 1.5;
+	min-height: 48px;
+	padding: .8rem 1.1rem;
+	text-transform: none;
+	white-space: normal;
+}
+
+.button span[aria-hidden] { flex-shrink: 0; }
+.button:focus-visible, .header-cta:focus-visible, .menu-toggle:focus-visible,
+.text-link:focus-visible, .main-nav a:focus-visible {
+	outline: 2px solid var(--accent-soft);
+	outline-offset: 4px;
+}
+
+.menu-toggle {
+	box-shadow: none;
+	line-height: normal;
+	min-height: 44px;
+	min-width: 44px;
+}
+
+.menu-toggle:hover { background-color: var(--surface-raised); }
 .button-primary { background: var(--accent); border-color: var(--accent); color: #160b08; font-weight: 500; }
 .button-primary:hover { background: var(--accent-soft); border-color: var(--accent-soft); color: #160b08; }
 .button-ghost { color: var(--ink); }
