@@ -1,7 +1,6 @@
-import { AfterViewInit, Component, DestroyRef, HostListener, Renderer2, inject } from '@angular/core';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { NavigationEnd, Router, RouterLink, RouterOutlet } from '@angular/router';
-import { filter } from 'rxjs';
+import { Component, HostListener, inject } from '@angular/core';
+import { PreferencesService } from './preferences.service';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,60 +8,26 @@ import { filter } from 'rxjs';
   imports: [RouterLink, RouterOutlet],
   templateUrl: './app.component.html',
 })
-export class AppComponent implements AfterViewInit {
-  private readonly renderer = inject(Renderer2);
-  private readonly router = inject(Router);
-  private readonly destroyRef = inject(DestroyRef);
-
-  protected isHomeRoute = true;
+export class AppComponent {
+  protected readonly ui = inject(PreferencesService);
   protected readonly currentYear = new Date().getFullYear();
+  protected menuOpen = false;
+  protected motionPaused = false;
 
-  ngAfterViewInit(): void {
-    this.setScrollRestoration();
-
-    window.setTimeout(() => {
-      this.renderer.removeClass(document.body, 'is-preload');
-    }, 100);
-
-    this.applyRouteState(this.router.url);
-
-    this.router.events
-      .pipe(
-        filter((event): event is NavigationEnd => event instanceof NavigationEnd),
-        takeUntilDestroyed(this.destroyRef),
-      )
-      .subscribe((event) => this.applyRouteState(event.urlAfterRedirects));
+  protected toggleMotion(): void {
+    this.motionPaused = !this.motionPaused;
   }
 
-  @HostListener('document:click')
-  protected onDocumentClick(): void {
-    if (!this.isHomeRoute) {
-      void this.router.navigateByUrl('/');
-    }
+  protected toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
   }
 
-  @HostListener('window:keyup', ['$event'])
-  protected onKeyUp(event: KeyboardEvent): void {
-    if (event.key === 'Escape' && !this.isHomeRoute) {
-      void this.router.navigateByUrl('/');
-    }
+  protected closeMenu(): void {
+    this.menuOpen = false;
   }
 
-  private applyRouteState(url: string): void {
-    this.isHomeRoute = url.split(/[?#]/)[0].replace(/^\/+|\/+$/g, '') === '';
-
-    if (this.isHomeRoute) {
-      this.renderer.removeClass(document.body, 'is-article-visible');
-    } else {
-      this.renderer.addClass(document.body, 'is-article-visible');
-    }
-
-    window.scrollTo(0, 0);
-  }
-
-  private setScrollRestoration(): void {
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual';
-    }
+  @HostListener('window:keydown.escape')
+  protected onEscape(): void {
+    this.closeMenu();
   }
 }

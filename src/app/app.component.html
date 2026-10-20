@@ -1,42 +1,42 @@
-<!-- Wrapper -->
-<div id="wrapper">
-  <!-- Header -->
-  <header id="header" [style.display]="isHomeRoute ? '' : 'none'" (click)="$event.stopPropagation()">
-    <div class="logo">
-      <img class="logo"
-        src="https://avatars.githubusercontent.com/u/49009770?u=557350ede83d6f12fb26c0ca20b2efeef61d34c2&v=4&size=64"
-        alt="Paulo Henrique de Oliveira Freire" />
-    </div>
-    <div class="content">
-      <div class="inner">
-        <h1>Hey, I'm Paulo!</h1>
-        <p>Software Engineer | React JS | Angular | Javascript | .Net </p>
-      </div>
-    </div>
-    <nav>
-      <ul>
-        <li><a routerLink="/intro">Intro</a></li>
-        <li><a routerLink="/work">Work</a></li>
-        <li><a routerLink="/education">Education</a></li>
-        <li><a href="https://ph-blog.vercel.app/" target="_blank" rel="noopener noreferrer">Blog</a></li>
-        <li><a routerLink="/contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Main -->
-  <div id="main" [style.display]="isHomeRoute ? 'none' : ''">
-    <router-outlet></router-outlet>
-  </div>
-
-  <!-- Footer -->
-  <footer id="footer" [style.display]="isHomeRoute ? '' : 'none'">
-    <p class="copyright">
-      &copy;
-      <b>{{ currentYear }}</b> Paulo HOF.
-    </p>
-  </footer>
+<div class="ambient-background" [class.is-paused]="motionPaused" aria-hidden="true">
+  <span class="ambient-glow ambient-glow-one"></span>
+  <span class="ambient-glow ambient-glow-two"></span>
+  <span class="ambient-orbit"></span>
 </div>
+<a class="skip-link" href="#main">{{ ui.text('Skip to content') }}</a>
 
-<!-- BG -->
-<div id="bg"></div>
+<header class="site-header">
+  <a class="brand" routerLink="/" fragment="top" [attr.aria-label]="ui.text('Paulo Freire — home')" (click)="closeMenu()">
+    <span class="brand-mark" aria-hidden="true">PF</span><span>Paulo Freire</span>
+  </a>
+  <button class="menu-toggle" type="button" [attr.aria-expanded]="menuOpen" aria-controls="main-nav" (click)="toggleMenu()">
+    <span class="sr-only">{{ ui.text('Toggle navigation') }}</span><span></span><span></span>
+  </button>
+  <nav id="main-nav" class="main-nav" [class.is-open]="menuOpen" [attr.aria-label]="ui.text('Main navigation')">
+    <a routerLink="/" fragment="about" (click)="closeMenu()">{{ ui.text('About') }}</a><a routerLink="/" fragment="experience" (click)="closeMenu()">{{ ui.text('Experience') }}</a>
+    <a routerLink="/" fragment="education" (click)="closeMenu()">{{ ui.text('Education') }}</a><a routerLink="/contact" (click)="closeMenu()">{{ ui.text('Contact') }}</a>
+    <a href="https://applycraft-sigma.vercel.app/" target="_blank" rel="noopener noreferrer" (click)="closeMenu()">Skills <span aria-hidden="true">↗</span></a>
+  </nav>
+  <div class="header-preferences">
+    <button class="theme-switch motion-switch" type="button" [attr.aria-label]="ui.text(motionPaused ? 'Resume background animation' : 'Pause background animation')" [attr.title]="ui.text(motionPaused ? 'Resume background animation' : 'Pause background animation')" [attr.aria-pressed]="motionPaused" (click)="toggleMotion()">
+      <span aria-hidden="true">{{ motionPaused ? '▶' : 'Ⅱ' }}</span>
+    </button>
+    <div class="language-switch" role="group" [attr.aria-label]="ui.text('Language')">
+      <button type="button" [attr.aria-pressed]="ui.language() === 'en'" aria-label="English" (click)="ui.setLanguage('en')">EN</button>
+      <button type="button" [attr.aria-pressed]="ui.language() === 'pt'" aria-label="Português" (click)="ui.setLanguage('pt')">PT</button>
+    </div>
+    <button class="theme-switch" type="button" [attr.aria-label]="ui.text(ui.theme() === 'dark' ? 'Use light theme' : 'Use dark theme')" [attr.title]="ui.text(ui.theme() === 'dark' ? 'Use light theme' : 'Use dark theme')" (click)="ui.toggleTheme()">
+      <span aria-hidden="true">{{ ui.theme() === 'dark' ? '☀' : '☾' }}</span>
+    </button>
+  </div>
+  <a class="header-cta" href="https://github.com/paulohfreire" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+</header>
+
+<main id="main">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="site-footer">
+  <a class="brand footer-brand" routerLink="/" fragment="top"><span class="brand-mark" aria-hidden="true">PF</span><span>Paulo Freire</span></a>
+  <p>{{ ui.text('Software engineer building clear, useful digital products.') }}</p><p>© {{ currentYear }} · {{ ui.text('Built with Angular') }}</p><a routerLink="/" fragment="top" [attr.aria-label]="ui.text('Back to top')">{{ ui.text('Back to top ↑') }}</a>
+</footer>

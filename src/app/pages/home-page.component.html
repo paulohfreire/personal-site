@@ -1,0 +1,106 @@
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ ui.text('Software engineer · Frontend specialist') }}</p>
+      <h1 id="hero-title">{{ ui.text('I build digital products that feel') }} <span>{{ ui.text('clear and efficient.') }}</span></h1>
+      <p class="hero-intro">{{ ui.text('I’m Paulo, a software engineer turning complex requirements into thoughtful, reliable interfaces with Angular, React and .NET.') }}</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#experience">{{ ui.text('Explore my work') }} <span aria-hidden="true">↓</span></a>
+        <a class="button button-ghost" routerLink="/contact">{{ ui.text('Let’s talk') }}</a>
+      </div>
+      <p class="availability"><span aria-hidden="true"></span> {{ ui.text('Based in Europe · Open to meaningful projects') }}</p>
+    </div>
+    <div class="hero-visual" [attr.aria-label]="ui.text('Portrait of Paulo Freire')">
+      <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+      <span class="orbit-dot dot-one"></span><span class="orbit-dot dot-two"></span>
+      <div class="portrait-frame"><img src="https://avatars.githubusercontent.com/u/49009770?v=4&size=512" alt="Paulo Henrique de Oliveira Freire" width="512" height="512" fetchpriority="high" /></div>
+      <p class="code-note">&lt;build with purpose /&gt;</p>
+    </div>
+    <div class="hero-stats" [attr.aria-label]="ui.text('Professional highlights')">
+      <div><strong>5+</strong><span>{{ ui.text('Years building products') }}</span></div>
+      <div><strong>04</strong><span>{{ ui.text('Core technologies') }}</span></div>
+      <div><strong>02</strong><span>{{ ui.text('Continents worked across') }}</span></div>
+    </div>
+  </section>
+
+  <section class="section about" id="about" aria-labelledby="about-title">
+    <div class="section-heading"><p class="eyebrow">{{ ui.text('01 · About') }}</p><h2 id="about-title">{{ ui.text('Engineering with the user in the room.') }}</h2></div>
+    <div class="about-grid">
+      <p class="about-lead">{{ ui.text('I care about the space where strong engineering and a genuinely good user experience meet.') }}</p>
+      <div class="about-copy">
+        <p>{{ ui.text('My path spans frontend and full-stack development, from polished Angular and React interfaces to API work with C# and ASP.NET Core. I enjoy making complicated systems easier to understand, use and maintain.') }}</p>
+        <p>{{ ui.text('Today I work in an international product team, bringing together code quality, collaboration and pragmatic delivery. I’m especially interested in design systems, AI-assisted products and frontend architecture.') }}</p>
+      </div>
+    </div>
+    <div class="skill-line" [attr.aria-label]="ui.text('Technology stack')"><span>Angular</span><span>React</span><span>TypeScript</span><span>.NET</span><span>{{ ui.text('Design systems') }}</span><span>{{ ui.text('AI integrations') }}</span></div>
+  </section>
+
+  <section class="section experience" id="experience" aria-labelledby="experience-title">
+    <div class="section-heading split-heading">
+      <div><p class="eyebrow">{{ ui.text('02 · Experience') }}</p><h2 id="experience-title">{{ ui.text('A track record of shipping.') }}</h2></div><p>{{ ui.text('Selected roles and the work behind them.') }}</p>
+    </div>
+    <div class="experience-list">
+      <article class="experience-card featured"><div class="experience-index">01</div><div class="experience-main">
+        <div class="role-row"><h3>{{ ui.text('Software Developer') }}</h3><span>{{ ui.text('Jul 2025 — Now') }}</span></div><p class="company">Closer Consulting</p>
+        <p>{{ ui.text('Developing Angular 21 components and pages, integrating backend APIs, and using Cursor and Claude Code CLI for refactoring and debugging, with Git and Azure DevOps for agile delivery.') }}</p>
+        <ul class="tags"><li>Angular 21</li><li>APIs</li><li>Cursor</li><li>Claude Code</li><li>Azure DevOps</li></ul>
+      </div></article>
+      <article class="experience-card"><div class="experience-index">02</div><div class="experience-main">
+        <div class="role-row"><h3>{{ ui.text('Frontend Developer') }}</h3><span>{{ ui.text('Feb — Jun 2025') }}</span></div><p class="company">Match Profiler</p>
+        <p>{{ ui.text('Built scalable React components and integrated backend APIs, improving page performance and user experience while collaborating in agile workflows with Git.') }}</p>
+        <ul class="tags"><li>React</li><li>APIs</li><li>Git</li></ul>
+      </div></article>
+      <article class="experience-card"><div class="experience-index">03</div><div class="experience-main">
+        <div class="role-row"><h3>{{ ui.text('Software Developer') }}</h3><span>2021 — 2024</span></div><p class="company">Framework Digital</p>
+        <p>{{ ui.text('Built responsive React and Angular interfaces for Localiza and C&A, aligning landing pages with marketing goals and maintaining technical documentation and code quality.') }}</p>
+        <ul class="tags"><li>React</li><li>Angular</li><li>HTML / CSS</li><li>Sass</li><li>Bootstrap</li></ul>
+      </div></article>
+      <article class="experience-card"><div class="experience-index">04</div><div class="experience-main">
+        <div class="role-row"><h3>{{ ui.text('Backend Developer') }}</h3><span>2020 — 2021</span></div><p class="company">Sistemas BR</p>
+        <p>{{ ui.text('Developed C# and .NET Core services and APIs, managed SQL databases and NuGet packages, and supported testing, production deployments and user documentation.') }}</p>
+        <ul class="tags"><li>.NET Core</li><li>C#</li><li>SQL</li><li>NuGet</li></ul>
+      </div></article>
+    </div>
+  </section>
+
+  <section class="section applycraft" id="applycraft" aria-labelledby="applycraft-title">
+    <div class="section-heading">
+      <p class="eyebrow">{{ ui.text('03 · Open-source project') }}</p>
+      <h2 id="applycraft-title">{{ ui.text('ApplyCraft. A clearer path to') }} <span>{{ ui.text('your next role.') }}</span></h2>
+    </div>
+    <div class="applycraft-card">
+      <div class="applycraft-copy">
+        <p class="eyebrow">{{ ui.text('AI skills · Local-first') }}</p>
+        <h3>{{ ui.text('A system for your job search.') }}</h3>
+        <p>{{ ui.text('I created ApplyCraft to turn job applications into a connected workflow. Its specialized AI skills help you assess opportunities, tailor your documents, prepare for interviews and track each next step.') }}</p>
+        <p>{{ ui.text('Your professional context stays in your workspace, ready to build on with every application.') }}</p>
+        <a class="button button-primary" href="https://applycraft-sigma.vercel.app/" target="_blank" rel="noopener noreferrer">{{ ui.text('Explore ApplyCraft') }} <span aria-hidden="true">↗</span></a>
+      </div>
+      <ol class="applycraft-workflow" [attr.aria-label]="ui.text('ApplyCraft workflow')">
+        <li><span aria-hidden="true">01</span><div><h3>{{ ui.text('Assess the fit') }}</h3><p>{{ ui.text('Compare the role with your real experience.') }}</p></div></li>
+        <li><span aria-hidden="true">02</span><div><h3>{{ ui.text('Tailor your application') }}</h3><p>{{ ui.text('Make your CV and cover letter relevant.') }}</p></div></li>
+        <li><span aria-hidden="true">03</span><div><h3>{{ ui.text('Prepare with context') }}</h3><p>{{ ui.text('Practice for the next stage of the process.') }}</p></div></li>
+        <li><span aria-hidden="true">04</span><div><h3>{{ ui.text('Keep moving forward') }}</h3><p>{{ ui.text('Track progress and keep the next action clear.') }}</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section education" id="education" aria-labelledby="education-title">
+    <div class="section-heading"><p class="eyebrow">{{ ui.text('04 · Education') }}</p><h2 id="education-title">{{ ui.text('Always learning. Always connecting the dots.') }}</h2></div>
+    <div class="education-grid">
+      <article><span>2024</span><h3>{{ ui.text('Software Engineering') }}</h3><p>{{ ui.text('Postgraduate degree · Focus') }}</p></article>
+      <article><span>2022</span><h3>{{ ui.text('IT Project Management') }}</h3><p>{{ ui.text('Postgraduate degree · Descomplica') }}</p></article>
+      <article><span>2022</span><h3>{{ ui.text('IT & Web Development') }}</h3><p>{{ ui.text('Technical degree · UFRN') }}</p></article>
+      <article><span>2016</span><h3>{{ ui.text('Production Engineering') }}</h3><p>{{ ui.text('Bachelor’s degree · UFRN') }}</p></article>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact" aria-labelledby="contact-title">
+    <p class="eyebrow">{{ ui.text('05 · Contact') }}</p><h2 id="contact-title">{{ ui.text('Have a problem worth solving?') }} <span>{{ ui.text('Let’s build it well.') }}</span></h2>
+    <p class="contact-copy">{{ ui.text('I’m always happy to talk about product engineering, frontend architecture or the next thoughtful digital experience.') }}</p>
+    <div class="contact-actions">
+      <a class="button button-primary" routerLink="/contact">{{ ui.text('Start a conversation') }} <span aria-hidden="true">↗</span></a>
+      <a class="text-link" href="https://www.linkedin.com/in/phfreire/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <a class="text-link" href="https://github.com/paulohfreire/" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      <a class="text-link" href="https://ph-blog.vercel.app/" target="_blank" rel="noopener noreferrer">Blog ↗</a>
+    </div>
+  </section>

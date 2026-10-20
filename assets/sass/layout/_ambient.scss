@@ -1,0 +1,73 @@
+// Decorative movement stays behind content and never intercepts input.
+app-root { display: block; isolation: isolate; position: relative; }
+
+.ambient-background {
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: fixed;
+  z-index: -1;
+}
+
+.ambient-glow {
+  background: radial-gradient(ellipse, rgba(229, 184, 73, .12), transparent 68%);
+  border-radius: 50%;
+  height: min(85vw, 900px);
+  position: absolute;
+  width: min(85vw, 900px);
+}
+
+.ambient-glow-one {
+  animation: ambient-drift-one 32s ease-in-out infinite alternate;
+  left: -22%;
+  top: -25%;
+}
+
+.ambient-glow-two {
+  animation: ambient-drift-two 38s ease-in-out infinite alternate;
+  bottom: -35%;
+  right: -20%;
+}
+
+.ambient-orbit {
+  animation: ambient-orbit-drift 45s ease-in-out infinite alternate;
+  border: 1px solid rgba(229, 184, 73, .07);
+  border-radius: 50%;
+  height: 110vmin;
+  position: absolute;
+  right: -30vmin;
+  top: 10%;
+  width: 80vmin;
+}
+
+@keyframes ambient-drift-one {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(14vw, 12vh, 0) scale(1.12); }
+}
+
+@keyframes ambient-drift-two {
+  from { transform: translate3d(0, 0, 0) scale(1.1); }
+  to { transform: translate3d(-12vw, -14vh, 0) scale(.95); }
+}
+
+@keyframes ambient-orbit-drift {
+  from { transform: rotate(-20deg) translateY(0); }
+  to { transform: rotate(15deg) translateY(-6vh); }
+}
+
+.ambient-background.is-paused > span { animation-play-state: paused; }
+
+html[data-theme='light'] .ambient-glow {
+  background: radial-gradient(ellipse, rgba(177, 132, 30, .10), transparent 68%);
+}
+html[data-theme='light'] .ambient-orbit { border-color: rgba(131, 96, 22, .08); }
+
+@media screen and (max-width: 760px) {
+  .ambient-glow { height: 110vw; width: 110vw; }
+  .ambient-orbit { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-background > span { animation: none; }
+  .header-preferences .motion-switch { display: none; }
+}
