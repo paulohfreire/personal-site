@@ -70,6 +70,8 @@
 	--line: rgba(244, 241, 234, 0.14);
 	--accent: #ff5b2d;
 	--accent-soft: #ff8a64;
+	--cta: #f5c542;
+	--cta-hover: #ffda70;
 	--max-width: 1240px;
 }
 
@@ -177,8 +179,9 @@ h3 { font-size: 1.25rem; line-height: 1.2; margin-bottom: .5rem; }
 }
 
 .menu-toggle:hover { background-color: var(--surface-raised); }
-.button-primary { background: var(--accent); border-color: var(--accent); color: #160b08; font-weight: 500; }
-.button-primary:hover { background: var(--accent-soft); border-color: var(--accent-soft); color: #160b08; }
+.button-primary { background: var(--cta); border-color: var(--cta); color: #160b08; font-weight: 500; }
+.button-primary:hover { background: var(--cta-hover); border-color: var(--cta-hover); color: #160b08; }
+.button-primary:focus-visible { outline-color: var(--cta-hover); }
 .button-ghost { color: var(--ink); }
 .availability { align-items: center; color: var(--dim); display: flex; font-family: 'DM Mono', monospace; font-size: .68rem; gap: .65rem; margin-top: 2.5rem; text-transform: uppercase; }
 .availability span { background: #72d68f; border-radius: 50%; box-shadow: 0 0 0 .2rem rgba(114,214,143,.12); height: .45rem; width: .45rem; }
