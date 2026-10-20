@@ -1,32 +1,37 @@
-<article id="contact" class="active" (click)="$event.stopPropagation()">
-  <h2 class="major">Contact</h2>
-  <form method="post" action="https://formspree.io/f/xrbgzkbn">
-    <div class="fields">
-      <div class="field half">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" required />
-      </div>
-      <div class="field half">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required />
-      </div>
-      <div class="field">
-        <label for="message">Message</label>
-        <textarea name="message" id="message" rows="4" required></textarea>
+<section class="section contact-page" aria-labelledby="contact-page-title">
+  <a class="text-link" routerLink="/">← Back to home</a>
+  <div class="contact-page-grid">
+    <div class="contact-page-intro">
+      <p class="eyebrow">Contact · Let’s connect</p>
+      <h1 id="contact-page-title">Good things start with <span>a conversation.</span></h1>
+      <p>Have a project in mind, a question or an opportunity to share? Tell me a little about it.</p>
+      <div class="contact-page-socials" aria-label="Social profiles">
+        <a class="text-link" href="https://www.linkedin.com/in/phfreire/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a class="text-link" href="https://www.instagram.com/paulofreireh/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+        <a class="text-link" href="https://github.com/paulohfreire/" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
       </div>
     </div>
-    <ul class="actions">
-      <li><input type="submit" value="Send Message" class="primary" /></li>
-      <li><input type="reset" value="Reset" /></li>
-    </ul>
-  </form>
-  <ul class="icons">
-    <li><a href="https://www.linkedin.com/in/phfreire/" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin"><span
-          class="label">Linkedin</span></a></li>
-    <li><a href="https://www.instagram.com/paulofreireh/" target="_blank" rel="noopener noreferrer" class="icon brands fa-instagram"><span
-          class="label">Instagram</span></a></li>
-    <li><a href="https://github.com/paulohfreire/" target="_blank" rel="noopener noreferrer" class="icon brands fa-github"><span
-          class="label">GitHub</span></a></li>
-  </ul>
-  <a routerLink="/" class="close">Close</a>
-</article>
+    <form class="contact-form" method="post" action="https://formspree.io/f/xrbgzkbn" aria-labelledby="form-title">
+      <h2 id="form-title">Send a message</h2>
+      <p class="form-note">All fields are required.</p>
+      <div class="contact-fields">
+        <div class="contact-field">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" autocomplete="name" required />
+        </div>
+        <div class="contact-field">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" autocomplete="email" required />
+        </div>
+        <div class="contact-field contact-field-message">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="6" required></textarea>
+        </div>
+      </div>
+      <div class="contact-form-actions">
+        <button type="submit" class="button button-primary">Send message <span aria-hidden="true">↗</span></button>
+        <button type="reset" class="button button-ghost">Reset</button>
+      </div>
+    </form>
+  </div>
+</section>
