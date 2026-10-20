@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
+import { PreferencesService } from './preferences.service';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
@@ -8,6 +9,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
+  protected readonly ui = inject(PreferencesService);
   protected readonly currentYear = new Date().getFullYear();
   protected menuOpen = false;
 

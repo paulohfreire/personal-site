@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PreferencesService } from '../preferences.service';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -7,4 +8,6 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink],
   templateUrl: './contact-page.component.html',
 })
-export class ContactPageComponent {}
+export class ContactPageComponent {
+  protected readonly ui = inject(PreferencesService);
+}
