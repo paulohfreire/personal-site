@@ -14,7 +14,7 @@ export const portuguese: Readonly<Record<string, string>> = {
   'Built with Angular': 'Feito com Angular',
   'Software engineer · Frontend specialist': 'Engenheiro de software · Especialista em frontend',
   'I build digital products that feel': 'Crio produtos digitais com',
-  'clear and human.': 'clareza e humanidade.',
+  'clear and human.': 'clareza e empatia.',
   'I’m Paulo, a software engineer turning complex requirements into thoughtful, reliable interfaces with Angular, React and .NET.': 'Sou Paulo, engenheiro de software que transforma requisitos complexos em interfaces bem pensadas e confiáveis com Angular, React e .NET.',
   'Explore my work': 'Conheça meu trabalho',
   'Let’s talk': 'Vamos conversar',
