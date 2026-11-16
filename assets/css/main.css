@@ -2051,6 +2051,15 @@ h3 {
   letter-spacing: -0.04em;
 }
 
+.applycraft-card + .applycraft-card {
+  margin-top: 1.5rem;
+}
+
+.project-summary {
+  color: var(--ink);
+  font-size: 1.1rem;
+}
+
 .applycraft-workflow {
   list-style: none;
   margin: 0;

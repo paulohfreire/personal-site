@@ -64,13 +64,14 @@
 
   <section class="section applycraft" id="applycraft" aria-labelledby="applycraft-title">
     <div class="section-heading">
-      <p class="eyebrow">{{ ui.text('03 · Open-source project') }}</p>
-      <h2 id="applycraft-title">{{ ui.text('ApplyCraft. A clearer path to') }} <span>{{ ui.text('your next role.') }}</span></h2>
+      <p class="eyebrow">{{ ui.text('03 · Projects') }}</p>
+      <h2 id="applycraft-title">{{ ui.text('Ideas turned into') }} <span>{{ ui.text('useful tools.') }}</span></h2>
     </div>
     <div class="applycraft-card">
       <div class="applycraft-copy">
-        <p class="eyebrow">{{ ui.text('AI skills · Local-first') }}</p>
-        <h3>{{ ui.text('A system for your job search.') }}</h3>
+        <p class="eyebrow">{{ ui.text('Open source · AI skills · Local-first') }}</p>
+        <h3>ApplyCraft</h3>
+        <p class="project-summary">{{ ui.text('A system for your job search.') }}</p>
         <p>{{ ui.text('I created ApplyCraft to turn job applications into a connected workflow. Its specialized AI skills help you assess opportunities, tailor your documents, prepare for interviews and track each next step.') }}</p>
         <p>{{ ui.text('Your professional context stays in your workspace, ready to build on with every application.') }}</p>
         <a class="button button-primary" href="https://applycraft-sigma.vercel.app/" target="_blank" rel="noopener noreferrer">{{ ui.text('Explore ApplyCraft') }} <span aria-hidden="true">↗</span></a>
@@ -80,6 +81,22 @@
         <li><span aria-hidden="true">02</span><div><h3>{{ ui.text('Tailor your application') }}</h3><p>{{ ui.text('Make your CV and cover letter relevant.') }}</p></div></li>
         <li><span aria-hidden="true">03</span><div><h3>{{ ui.text('Prepare with context') }}</h3><p>{{ ui.text('Practice for the next stage of the process.') }}</p></div></li>
         <li><span aria-hidden="true">04</span><div><h3>{{ ui.text('Keep moving forward') }}</h3><p>{{ ui.text('Track progress and keep the next action clear.') }}</p></div></li>
+      </ol>
+    </div>
+    <div class="applycraft-card">
+      <div class="applycraft-copy">
+        <p class="eyebrow">{{ ui.text('Angular · TypeScript · AI skills') }}</p>
+        <h3>Landing Page Creator</h3>
+        <p class="project-summary">{{ ui.text('From a service brief to a standalone landing page.') }}</p>
+        <p>{{ ui.text('I created Landing Page Creator to turn service briefs into standalone Angular pages. Codex skills and TypeScript tools guide planning, generation and updates, with customizable content, styles and contact options.') }}</p>
+        <p>{{ ui.text('Each page has its own project, with preview and human approval before publication.') }}</p>
+        <a class="button button-primary" routerLink="/contact">{{ ui.text('Talk about Landing Page Creator') }} <span aria-hidden="true">↗</span></a>
+      </div>
+      <ol class="applycraft-workflow" [attr.aria-label]="ui.text('Landing Page Creator workflow')">
+        <li><span aria-hidden="true">01</span><div><h3>{{ ui.text('Start with the brief') }}</h3><p>{{ ui.text('Define the service, audience and page content.') }}</p></div></li>
+        <li><span aria-hidden="true">02</span><div><h3>{{ ui.text('Generate the page') }}</h3><p>{{ ui.text('Create a standalone Angular project from the content.') }}</p></div></li>
+        <li><span aria-hidden="true">03</span><div><h3>{{ ui.text('Preview and refine') }}</h3><p>{{ ui.text('Review the layout, copy and contact details.') }}</p></div></li>
+        <li><span aria-hidden="true">04</span><div><h3>{{ ui.text('Approve and publish') }}</h3><p>{{ ui.text('Publish the reviewed version after human approval.') }}</p></div></li>
       </ol>
     </div>
   </section>

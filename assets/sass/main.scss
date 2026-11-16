@@ -218,6 +218,8 @@ h3 { font-size: 1.25rem; line-height: 1.2; margin-bottom: .5rem; }
 	padding: 2rem;
 }
 .applycraft-copy > h3 { font-size: 1.8rem; letter-spacing: -.04em; }
+.applycraft-card + .applycraft-card { margin-top: 1.5rem; }
+.project-summary { color: var(--ink); font-size: 1.1rem; }
 .applycraft-workflow { list-style: none; margin: 0; padding: 0; }
 .applycraft-workflow li { border-bottom: 1px solid var(--line); display: flex; gap: 1rem; padding: 1rem 0; }
 .applycraft-workflow li:first-child { padding-top: 0; }
