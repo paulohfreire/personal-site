@@ -54,7 +54,7 @@ export const portuguese: Readonly<Record<string, string>> = {
   'From a service brief to a standalone landing page.': 'Do briefing de um serviço a uma landing page independente.',
   'I created Landing Page Creator to turn service briefs into standalone Angular pages. Codex skills and TypeScript tools guide planning, generation and updates, with customizable content, styles and contact options.': 'Criei o Landing Page Creator para transformar briefings de serviços em páginas Angular independentes. Skills Codex e ferramentas TypeScript orientam o planejamento, a geração e as alterações, com conteúdo, estilos e opções de contato personalizáveis.',
   'Each page has its own project, with preview and human approval before publication.': 'Cada página tem seu próprio projeto, com prévia e aprovação humana antes da publicação.',
-  'Talk about Landing Page Creator': 'Converse sobre o Landing Page Creator',
+  'View the Clara demo': 'Ver demo da Clara',
   'Landing Page Creator workflow': 'Fluxo do Landing Page Creator',
   'Start with the brief': 'Comece pelo briefing',
   'Define the service, audience and page content.': 'Defina o serviço, o público e o conteúdo da página.',
